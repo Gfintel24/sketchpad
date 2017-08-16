@@ -1,52 +1,34 @@
 $(document).ready(function(){
-var square = ("<div class='square'></div>");
-var count = 0;
-var numberOfSquares = 16;
-var numberOfRows = Math.sqrt(numberOfSquares);
-var sqWidth = ($('#container').width()) / numberOfRows;
-var sqHeight = ($('#container').height()) / numberOfRows;
-var btnMargin = ($('body').width()) / 2;
-
-// createGridByInlineBlock();
-createGridByTable();
-
-$('.newPad').css("margin", "0 " + btnMargin + "px");
-
-$('.newPad').click(function(){
-  numberOfSquares = prompt ("How many squares would you like?");
-  $(table).empty();
-  numberOfRows = Math.sqrt(numberOfSquares);
-  sqWidth = ($('#container').width()) / numberOfRows;
-  sqHeight = ($('#container').height()) / numberOfRows;
+  var numberOfRows = 8;
+  var previousRows = 0;
+  var btnMargin = ($('body').width()) / 2;
 
   createGridByTable();
-});
 
+  $('.newPad').css("margin", "0 " + btnMargin + "px");
 
-
-// $('td').hover(function (){
-//   $(this).css("background-color", "black");
-// }, function(){});
-
-// function createGridByInlineBlock(){
-//   while (count < numberOfSquares){
-//     $('#container').append(square);
-//     count++;
-//   }
-//   $('.square').width(sqWidth);
-//   $('.square').height(sqHeight);
-// }
+  $('.newPad').click(function(){
+    var currentRows = numberOfRows;
+    numberOfRows = prompt ("How many squares, on each side, would you like?");
+    // if (currentRows > numberOfRows){
+      $(table).empty();
+      createGridByTable();
+    // }
+    // else{
+    //   increaseGrid(currentRows);
+    // }
+  });
 
   function createGridByTable(){
+    var sqWidth = ($('#container').width()) / numberOfRows;
+    var sqHeight = ($('#container').height()) / numberOfRows;
     var tableRow = ("<tr class='row'></tr>");
     var tableData = ("<td class='data'></td>");
     var rowCount = 0;
     var dataCount = 0;
 
-
     while (rowCount < numberOfRows){
       $('#table').append(tableRow);
-
       while (dataCount < numberOfRows){
         $('.row').last().append(tableData);
         dataCount++
@@ -63,6 +45,19 @@ $('.newPad').click(function(){
     });
   }
 
-
-
+  // function increaseGrid(currentRows){
+  //   var rowsToMake = numberOfRows - currentRows;
+  //   var rowCount = 0;
+  //   var dataCount = 0;
+  //
+  //   while (rowCount < numberOfRows){
+  //     $('#table').append(tableRow);
+  //     while (dataCount < numberOfRows){
+  //       $('.row').last().append(tableData);
+  //       dataCount++
+  //     }
+  //     dataCount = 0;
+  //     rowCount++
+  //   }
+  // }
 });
