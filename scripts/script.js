@@ -1,6 +1,5 @@
 $(document).ready(function(){
   var numberOfRows = 8;
-  var previousRows = 0;
   var btnMargin = ($('body').width()) / 2;
 
   createGridByTable();
@@ -8,14 +7,14 @@ $(document).ready(function(){
   $('.newPad').css("margin", "0 " + btnMargin + "px");
 
   $('.newPad').click(function(){
-    var currentRows = numberOfRows;
+    // var currentRows = numberOfRows;
     numberOfRows = prompt ("How many squares, on each side, would you like?");
     // if (currentRows > numberOfRows){
       $(table).empty();
       createGridByTable();
     // }
-    // else{
-    //   increaseGrid(currentRows);
+    // elseif (numberOfRows > currentRows){
+    //   increaseGrid();
     // }
   });
 
@@ -29,6 +28,7 @@ $(document).ready(function(){
 
     while (rowCount < numberOfRows){
       $('#table').append(tableRow);
+      $('')
       while (dataCount < numberOfRows){
         $('.row').last().append(tableData);
         dataCount++
@@ -45,7 +45,7 @@ $(document).ready(function(){
     });
   }
 
-  // function increaseGrid(currentRows){
+  // function(){
   //   var rowsToMake = numberOfRows - currentRows;
   //   var rowCount = 0;
   //   var dataCount = 0;

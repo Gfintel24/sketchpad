@@ -5,27 +5,39 @@
 }
 
 html {
+  background-image: url("http://www.print2paper.co.uk/wp-content/uploads/2015/08/Desktop-2.jpg");
   height: 100%;
+  background-size: cover;
 }
 
 body {
   height: 100%;
+  /*background-image: url("http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw067d02ea/images/finished-goods/Classic-Etch-A-Sketch-Drawing-Toy-root-50505_50505_1470_1.jpg_Source_Image.jpg?sfrm=jpg");
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: center top;
+  background-origin: content-box;*/
+}
+
+#etchSketch {
+  width: 915px;
+  height: 770px;
+  margin: auto;
+  margin-top: 120px;
+  background-image: url("images/croppedSketch.jpg");
+  background-repeat: no-repeat;
+  background-size: 910px;
+  background-position: center top: 120px;
+  z-index: 1;
 }
 
 #container {
-  padding-top: 100px;
-  height: 500px;
-  Width: 500px;
+  padding-top: 133px;
+  height: 478px;
+  Width: 657px;
   margin: auto;
-  max-width: 500px;
-  max-height: 500px;
-}
-
-div.square {
-  display: inline-block;
-  background-color: blue;
-  border: 1px solid #CCC;
-  border-collapse: collapse;
+  max-height: 485px;
+  z-index: 3:
 }
 
 .row {
@@ -34,20 +46,40 @@ div.square {
 }
 
 .data {
-  background-color: blue;
+  background-color: #a5a5a5;
   border-color: none;
   padding: 0;
 }
 
 table {
-  border-collapse: collapse;
   height: 100%;
   width: 100%;
   max-height: 500px;
   overflow-y: hidden;
+  border-radius:50px;
+}
+
+table tr:first-child td:first-child {
+    border-top-left-radius: 35%;
+}
+
+table tr:first-child td:last-child {
+    border-top-right-radius: 35%;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 35%;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 35%;
 }
 
 .newPad {
+
+  padding: 12px 24px;
+  background-color: gray;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   border: 1px solid black;
   position: absolute;
 }
