@@ -7,7 +7,7 @@ $(document).ready(function(){
   var gradPen = 2;
 
   //Create initial grid based off numberOfRows.
-  createGridByTable();
+  createGrid();
 
   //When clicked, prompts user for size of new pad, empties the table, and then calls the createGride function.
   $('#newPad').click(function(){
@@ -50,7 +50,7 @@ $(document).ready(function(){
       dataCount = 0;
       rowCount++
     }
-    
+
     //Sets row and data element dimensions based on requested rows.
     $('.row').height(sqHeight);
     $('.data').width(sqWidth);
