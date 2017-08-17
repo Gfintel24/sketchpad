@@ -12,15 +12,10 @@ html {
 
 body {
   height: 100%;
-  /*background-image: url("http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw067d02ea/images/finished-goods/Classic-Etch-A-Sketch-Drawing-Toy-root-50505_50505_1470_1.jpg_Source_Image.jpg?sfrm=jpg");
-  background-repeat: no-repeat;
-  background-size: 1000px;
-  background-position: center top;
-  background-origin: content-box;*/
 }
 
 #etchSketch {
-  width: 915px;
+  width: 910px;
   height: 770px;
   margin: auto;
   margin-top: 120px;
@@ -29,6 +24,7 @@ body {
   background-size: 910px;
   background-position: center top: 120px;
   z-index: 1;
+  box-shadow: 0 24px 32px 0 rgba(0,0,0,0.48), 0 17px 50px 0 rgba(0,0,0,0.38);
 }
 
 #container {
@@ -37,7 +33,7 @@ body {
   Width: 657px;
   margin: auto;
   max-height: 485px;
-  z-index: 3:
+  z-index: 3;
 }
 
 .row {
@@ -56,7 +52,7 @@ table {
   width: 100%;
   max-height: 500px;
   overflow-y: hidden;
-  border-radius:50px;
+  border-radius:50px;left: 12px;
 }
 
 table tr:first-child td:first-child {
@@ -75,11 +71,45 @@ table tr:last-child td:last-child {
     border-bottom-right-radius: 35%;
 }
 
-.newPad {
-
-  padding: 12px 24px;
-  background-color: gray;
+.button {
+  font-size: 17px;
+  font-family: arial, sans-serif;
+  margin-left: 11px;
+  border-radius: 50px;
+  background-color: #a29191;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   border: 1px solid black;
   position: absolute;
+}
+
+#newPad {
+  top: 360px;
+  padding: 12px 17px;
+}
+
+#rainbow {
+  top: 420px;
+  padding: 12px 18px;
+}
+
+/*Need to spend more time learning how to implement this function correctly.
+/*#gradient {
+  top: 480px;
+  padding: 12px 18px;
+}*/
+
+#black {
+  width: 102px;
+  top: 480px;
+  padding: 12px 18px;
+}
+
+.button:hover {
+  background-color: #ab9c9c;
+}
+
+.button:active {
+  background-color: #998686;
+  box-shadow: 0 10px 12px 0 rgba(0,0,0,0.3), 0 17px 50px 0 rgba(0,0,0,0.3);
+  transform: translateY(2px);
 }
